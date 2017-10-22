@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Nhập vào UserName</h1>
+	<input type="text" ng-model = "userID"></input>
+	<input type="button" value="OK" ng-click="register(userID)"></input>
+	<h1>Server Message</h1>
+	<h4>{{serverMsg[0]}}</h4>
+	<p ng-repeat = "msg in loop(1,serverMsg.length)">{{serverMsg[msg]}}</p>
+</body>
+</html>

@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="customersApp">
+<head>
+    <title>Customer Manager</title>
+    <link href="public/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="public/css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="public/css/customerManagementStyles.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <ul class="nav nav-pills" data-ng-controller="NavbarController">
+                    <li data-ng-class="{'active':getClass('/game')}"><a href="#/game">Game</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+ -->
+    <!-- Note that AngularJS 1.2+ now has a built-in ng-animation direction. Left in animated-view to show a 
+         custom directive -->
+    <div animated-view></div>
+   <!--  {{voc}}
+    <gametext vocabulary = "voc"></gametext>
+    <input type="button" ng-click = "gf()" value="GF"></input>
+    <p>{{voc}}</p> -->
+
+    <!-- <div id="footer">
+        <div class="navbar navbar-fixed-bottom">
+            <div class="navbar-inner">
+                <div class="container">
+                    <footer>
+                        <div class="row">
+                                Some footers 1
+                        </div>
+                   </footer>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Vendor Libs: jQuery only used for Bootstrap functionality -->
+    <script src="public/js/angular.js"></script>
+    <script src="public/js/angular-route.js"></script>
+    <script src="public/js/jquery.min.js"></script>
+
+    <!-- UI Libs -->
+    <script src="public/js/bootstrap.js"></script>
+
+
+    <!-- App libs -->
+    <script src="app/app.js"></script>
+    <script src="app/controllers/game.controllers.js"></script>
+    <script src="app/controllers/register.controllers.js"></script>
+    <script src="app/controllers/navbar.controllers.js"></script>
+
+    <script src="app/directives/animatedView.js"></script>
+    <script src="app/directives/textbox.directive.js"></script>
+    <script src="app/directives/user.directive.js"></script>
+    <script src="public/js/socket.io-1.2.0.js"></script>
+
+    <script>
+        // var socket = io();
+        //  socket.emit('clientEvent', 'Sent an event from the client!');
+    </script>
+</body>
+</html>

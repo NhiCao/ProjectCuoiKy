@@ -1,0 +1,6 @@
+<h1>{{title}}</h1>
+<div ng-repeat="todo in list">
+  <input type="checkbox" ng-model="todo.completed"> {{todo.name}}
+</div>​
+<input type="text" ng-model = "newTodo"></input>
+<input type="button" ng-click = "addTodo(newTodo)" value="Add"></input>

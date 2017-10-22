@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>STUDY GAME</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" href="../../public/css/gamestyle.css" type="text/css" charset="utf-8" />
+</head>
+<body>
+<div id="wrapper">
+  <h1><em>GAME</em> ACADEMY</h1>
+  <div id="nav">
+    <ul>
+      <li><a href="#/register"><span>01</span> HOME</a></li>
+    </ul>
+  </div>
+  <!-- <div id="topcon">
+    <div id="topcon-inner">
+      <h2>Welcome to GAME ACADEMY</h2>
+      <p>Let's Study, Let's Play</p>
+      <p>Enjoy it!</p>
+    </div>
+  </div> -->
+
+    
+
+
+
+
+
+
+
+  <div id="content">
+    <div id="body">
+    <!-- hiển thị user name -->
+    <h1>UserName : {{userName}}</h1>
+
+
+    <!-- phần này sẽ hiển thị thứ hạng của người chơi sau khi chơi xong -->
+    <div id="scoreScreen">
+      <h1>Score</h1>
+      <h4 ng-repeat = "rank in rankList" align="center">{{rank.rank}} : {{rank.userName}}</h4>
+      <a href="#/register"> Play again</a>
+    </div>
+
+
+    <!-- phần mày là màn hình ghi chơi -->
+    <div id = "gameplaying">
+      <!-- gồm có phần để đánh chữ -->
+      <fieldset id = "gameScreen">
+        <ol>
+          <li ng-repeat="voc in Vocabulary">
+            <gametext vocabulary = "voc" matchfunc="match"></gametext>
+          </li>
+        </ol>
+      </fieldset>
+      
+      <!-- và phần hiển thị các user đang chơi + thời gian của user đó -->
+      <h1>UserList</h1>
+      <ol>
+        <li ng-repeat="user in userList">
+          <userdir user = "user"></userdir>
+        </li>
+      </ol>
+    </div>
+
+
+    <!-- hiển thị thông tin từ server -->
+    <h1>Server Message</h1>
+    <h4>{{serverMsg[0]}}</h4>
+    <p ng-repeat = "msg in loop(1,serverMsg.length)">{{serverMsg[msg]}}</p>
+
+    
+
+    
+    
+
+    </div>
+    <!-- <div id="footer">
+      <ul>
+        <li><a href="#">PICTURE</a> | </li>
+       
+        <li><a href="#">FEATURES</a> | </li>
+        <li><a href="#">CONTACTS</a> | </li>
+      </ul>
+      <p>&copy; Business Co <a href="#">Privacy Policy</a> | designed by <a href="http://www.fb.com/shinchein">gamestyle</a>.</p>
+    </div> -->
+  </div>
+</div>
+</body>
+</html>
